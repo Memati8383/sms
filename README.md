@@ -20,11 +20,6 @@ cd sms
 pip install -r requirements.txt
 python main.py
 ```
-# 🛠️ Kurulum
-Alternatif olarak, aşağıdaki tek bir komutla da kurulum yapabilirsiniz:
-```bash
-git clone https://github.com/Memati8383/sms.git&&cd sms&&pip install -r requirements.txt&&python main.py
-```
 
 ## 📋 Kullanım Talimatları
 

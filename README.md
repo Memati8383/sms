@@ -29,12 +29,12 @@ python main.py
 
 2. "Tek bir numaraya SMS gönder" seçeneğini seçerseniz:
    - Hedef telefon numarasını girin
-   - Gönderme sayısını belirtin
+   - Eğlenin... :)
 
 3. "Birden fazla numaraya SMS gönder" seçeneğini seçerseniz:
    - Birden fazla isimlerini ve numarayı ekleyin
    - Eğer daha fazla eklemek istemiyorsanız `q` basın
-   - Gönderme sayısını belirtin
+   - Eğlenin... :)
 
 ## 📚 Bilgi
 

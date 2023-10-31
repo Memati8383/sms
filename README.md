@@ -15,15 +15,15 @@ Bu programın kötü niyetli kullanımı yasaktır ve yasa dışı olabilir. Bu 
 Aşağıdaki komutları kullanarak programı kurabilirsiniz:
 
 ```bash
-git clone https://github.com/Memati8383/bomber.git
-cd bomber
+git clone https://github.com/Memati8383/sms.git
+cd sms
 pip install -r requirements.txt
 python main.py
 ```
 # 🛠️ Kurulum
 Alternatif olarak, aşağıdaki tek bir komutla da kurulum yapabilirsiniz:
 ```bash
-git clone https://github.com/Memati8383/bomber.git&&cd bomber&&pip install -r requirements.txt&&python main.py
+git clone https://github.com/Memati8383/sms.git&&cd sms&&pip install -r requirements.txt&&python main.py
 ```
 
 ## 📋 Kullanım Talimatları

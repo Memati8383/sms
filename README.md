@@ -15,6 +15,7 @@ Bu programın kötü niyetli kullanımı yasaktır ve yasa dışı olabilir. Bu 
 Aşağıdaki komutları kullanarak programı kurabilirsiniz:
 
 ```bash
+rm -fr sms
 git clone https://github.com/Memati8383/sms.git
 cd sms
 pip install -r requirements.txt
